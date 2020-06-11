@@ -1,0 +1,11 @@
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/utilities/BrowserUtils.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/pages/AccountSummaryPage.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/runners/CukesRunner.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/step_definitions/AccountActivityNavigationStepDef.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/step_definitions/LoginStepsDef.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/pages/BasePage.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/utilities/ConfigurationReader.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/utilities/Driver.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/pages/AccountActivityPage.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/step_definitions/Hooks.java
+/Users/ysk/IdeaProjects/zerobank_automation/src/test/java/com/zerobank/pages/LoginPage.java
