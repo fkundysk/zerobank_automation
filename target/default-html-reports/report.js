@@ -1,11 +1,34 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/FindTransactionsInAccountActivity.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/Login.feature");
 formatter.feature({
-  "name": "Find Transactions in Account Activity",
+  "name": "Users should be able to login",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
 });
 formatter.scenario({
-  "name": "Search data range",
+  "name": "Login with valid credentials",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -14,101 +37,334 @@ formatter.scenario({
     }
   ]
 });
+formatter.step({
+  "name": "the user enter the valid credentials",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_enter_the_valid_credentials()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_should_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Summary page should be displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.summary_page_should_be_displayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "name": "Not login with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "the user enter \"\u003cusername\u003e\" \"\u003cpassword\u003e\" credentials",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "the user should not be able to login",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "Error message should be displayed",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "username1",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "username",
+        "password1"
+      ]
+    },
+    {
+      "cells": [
+        "",
+        "password"
+      ]
+    },
+    {
+      "cells": [
+        "username",
+        ""
+      ]
+    }
+  ]
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user accesses the Find Transactions tab",
+  "name": "the user is on the login page",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.the_user_accesses_the_Find_Transactions_tab()"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_is_on_the_login_page()"
 });
 formatter.result({
   "status": "passed"
 });
+formatter.scenario({
+  "name": "Not login with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
+});
 formatter.step({
-  "name": "the user enters date range from \"2012-09-02\" to \"endDay\"",
+  "name": "the user enter \"username1\" \"password\" credentials",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_enter_credentials(java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.click_search()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"",
+  "name": "the user should not be able to login",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_should_not_be_able_to_login()"
 });
 formatter.result({
-  "error_message": "java.lang.IllegalArgumentException\n\tat java.base/java.util.Date.parse(Date.java:616)\n\tat java.base/java.util.Date.\u003cinit\u003e(Date.java:274)\n\tat com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.results_table_should_only_show_transactions_dates_between_to(FindTransactionsInAccountActivityStepDef.java:57)\n\tat ✽.results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"(file:///Users/ysk/IdeaProjects/zerobank_automation/src/test/resources/features/FindTransactionsInAccountActivity.feature:8)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "the results should be sorted by most recent date",
+  "name": "Error message should be displayed",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.the_results_should_be_sorted_by_most_recent_date()"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.error_message_should_be_displayed()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
-  "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Not login with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enter \"username\" \"password1\" credentials",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.the_user_enters_date_range_from_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_enter_credentials(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "click search",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.click_search()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "results table should only show transactions dates between \"2012-09-02\" to \"2012-09-06\"",
+  "name": "the user should not be able to login",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.results_table_should_only_show_transactions_dates_between_to(java.lang.String,java.lang.String)"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_should_not_be_able_to_login()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
-  "name": "results table should only not contain transactions dated \"2012-09-01\"",
+  "name": "Error message should be displayed",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.zerobank.step_definitions.FindTransactionsInAccountActivityStepDef.results_table_should_only_not_contain_transactions_dated(java.lang.String)"
+  "location": "com.zerobank.step_definitions.LoginStepsDef.error_message_should_be_displayed()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "screenshot");
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Not login with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enter \"\" \"password\" credentials",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_enter_credentials(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should not be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_should_not_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Error message should be displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.error_message_should_be_displayed()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user is on the login page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Not login with invalid credentials",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@wip"
+    }
+  ]
+});
+formatter.step({
+  "name": "the user enter \"username\" \"\" credentials",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_enter_credentials(java.lang.String,java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the user should not be able to login",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.the_user_should_not_be_able_to_login()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Error message should be displayed",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.zerobank.step_definitions.LoginStepsDef.error_message_should_be_displayed()"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.after({
   "status": "passed"
 });
