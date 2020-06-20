@@ -18,6 +18,12 @@ public class AccountActivityPage extends BasePage {
     @FindBy(xpath = "//li//a[@href='#ui-tabs-2']")
     public WebElement findTransactions;
 
+    @FindBy (id = "aa_accountId")
+    public WebElement dropDownOpt;
+
+    @FindBy(xpath = "//th")
+    public List<WebElement> actualHeaders;
+
     public String actualSelected(String selectedOption){
         Select actualSelect = new Select(Driver.get().findElement(By.id("aa_accountId")));
         String actualOption = actualSelect.getFirstSelectedOption().getText();

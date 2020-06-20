@@ -15,6 +15,13 @@ public class AccountSummaryPage extends BasePage {
     @FindBy(xpath = "//table//tbody//tr//td[1]//a")
     public List<WebElement> allLink;
 
+    @FindBy(xpath = "//ul[@class='nav nav-tabs']/li")
+    public List<WebElement> navList;
+
+    @FindBy(xpath = "//h2[@class='board-header']")
+    public List<WebElement> subNavList;
+
+
     public void goLink(String linkStr)  {
 
       //  Driver.get().findElement(By.xpath("//table//td//a[contains(text(),'" + linkStr + "')]")).click();
